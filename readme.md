@@ -1,4 +1,4 @@
-# Peano: a minimal & modern theme 
+# Peano: a minimal & modern Beamer theme 
 
 **Peano** is a PDFLaTeX-compatible LaTeX Beamer theme developed by myself for use in the CrypTo research group at the *Politecnico di Torino* (Italy), named after the famous Turinese mathematician Giuseppe Peano, also the namesake of our department. The color palette is derived by Prussian Blue, the official color of *Politecnico di Torino*.
 
