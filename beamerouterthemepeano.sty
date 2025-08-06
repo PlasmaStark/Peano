@@ -1,0 +1,72 @@
+% ======================
+% LOGOS
+% ======================
+\pgfdeclareimage[width=0.09\paperwidth]{primarylogo}{images/polito_logo_primary.png}
+\pgfdeclareimage[width=0.09\paperwidth]{primarylogo_neg}{images/polito_logo_primary_negative.png}
+\newcommand{\@primarylogo}{primarylogo}
+
+% ======================
+% FRAME TITLE
+% ======================
+\defbeamertemplate*{frametitle}{peano}[1][]
+{
+  \vskip-0.05cm%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=2cm,dp=0pt]{frametitle}
+    \begin{tikzpicture}[remember picture,overlay]
+      \useasboundingbox (0,0) rectangle (\the\paperwidth,2);
+
+      \fill[polito] 
+        (0,2.5) --             
+        (\the\paperwidth,2) -- 
+        (\the\paperwidth,0.5) -- 
+        (0,0) --                
+        cycle;
+
+      \ifx\insertframesubtitle\@empty%
+        \node[anchor=west, white] at (0.4,1.2) {\insertframetitle};
+      \else%
+        \node[anchor=west, white] at (0.4,1.2) {\insertframetitle};
+        \node[anchor=west, white, font=\small] at (0.4,0.7) {\insertframesubtitle};
+      \fi
+    \end{tikzpicture}
+  \end{beamercolorbox}
+}
+
+% ======================
+% SECTIONS
+% ======================
+\AtBeginSection[]
+{
+  \begingroup
+  \setbeamercolor{normal text}{fg=polito}
+  \setbeamercolor{structure}{fg=polito-orange}
+  \setbeamercolor{section in toc}{fg=white}
+
+  % Background personalizzato: blu
+  \setbeamertemplate{background}{
+    \begin{tikzpicture}[remember picture, overlay]
+      \fill[polito] (current page.south west) rectangle (current page.north east);
+    \end{tikzpicture}
+  }
+
+  \begin{frame}
+    \centering
+    \vspace*{1cm}
+    \usebeamerfont{section title}
+    \usebeamercolor[fg]{section in toc}
+    \LARGE Table of Contents
+
+    \vspace{0.5cm}
+    \normalsize
+    \tableofcontents[currentsection]
+  \end{frame}
+  
+  % Ripristina background
+  \setbeamertemplate{background}{}
+  \endgroup
+}
+
+% ======================
+% FOOTER
+% ======================
+\setbeamertemplate{navigation symbols}{}
