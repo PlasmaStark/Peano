@@ -1,3 +1,6 @@
+% ======================
+% MISCELLANEA
+% ======================
 \setbeamertemplate{title page}{
   \begin{tikzpicture}[remember picture, overlay]
     \fill[polito] 
@@ -17,16 +20,15 @@
         ([xshift=0.25cm]polito.north east) -- 
         ([xshift=0.25cm]polito.south east);
     \end{scope}
+        \node[anchor=north west, align=left, text width=0.6\paperwidth, inner sep=1em] 
+      at ([xshift=0.38\paperwidth, yshift=-4cm] current page.north west)
+      {
+        {\usebeamerfont{title}\color{white}\inserttitle\par\vspace{1ex}}
+        {\usebeamerfont{subtitle}\color{white}\insertsubtitle\par\vspace{1.5ex}}
+        {\usebeamerfont{author}\color{white}\textbf{\insertauthor}\par\vspace{1ex}}
+        {\usebeamerfont{date}\color{white}\insertdate}
+      };
   \end{tikzpicture}
-  \vskip0pt plus 1filll
-  \hspace*{0.30\paperwidth}
-  \vspace{20mm}
-  \begin{beamercolorbox}[wd=0.65\paperwidth, sep=10pt, rightskip=8mm]{title}%
-    {\usebeamerfont{title}\color{white}\inserttitle\par\vspace{1ex}}{\usebeamerfont{subtitle}\color{white}\insertsubtitle\par\vspace{1ex}}
-    {\usebeamerfont{author}\usebeamercolor[fg]{author}\color{white}\textbf{\insertauthor}\par\vspace{1ex}}
-    {\usebeamerfont{date}\usebeamercolor[fg]{date}\color{white}\insertdate}
-  \end{beamercolorbox}
-  \vskip0pt plus 2fill
 }
 
 % ======================

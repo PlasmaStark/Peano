@@ -1,6 +1,8 @@
 \documentclass{beamer}
 
 \usetheme{peano}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{bibliography.bib}
 
 \title[Modern Cryptography]{Modern Cryptography}
 \subtitle{From One-Time Pad to Post-Quantum}
@@ -19,7 +21,7 @@
 
 \begin{frame}{What is Cryptography?}
 \begin{block}{Definition}
-Cryptography is the study of techniques for securing communication in the presence of adversaries.
+Cryptography is the study of techniques for securing communication in the presence of adversaries \cite{BS20,S95}.
 \end{block}
 
 \begin{itemize}
@@ -105,12 +107,8 @@ Resistant to Shor's algorithm. Used in NIST PQC finalists.
 \end{itemize}
 \end{frame}
 
-\begin{frame}{References}
-\begin{itemize}
-\item D. Boneh, V. Shoup, A Graduate Course in Applied Cryptography
-\item NIST PQC Project — \url{https://csrc.nist.gov/Projects/post-quantum-cryptography}
-\item Bruce Schneier, Applied Cryptography
-\end{itemize}
+\begin{frame}[allowframebreaks]{References}
+  \printbibliography
 \end{frame}
 
 \begin{frame}{Thank you!}
