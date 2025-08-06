@@ -1,11 +1,13 @@
 # Peano: a minimal & modern Beamer theme 
 
 **Peano** is a PDFLaTeX-compatible LaTeX Beamer theme developed by myself for use in the CrypTo research group at the *Politecnico di Torino* (Italy), named after the famous Turinese mathematician Giuseppe Peano, also the namesake of our department. The color palette is derived by Prussian Blue, the official color of *Politecnico di Torino*.
-
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/459b59d2-4a8c-46f0-9b14-54285e35978f" width="30%" alt="Example 1." />
-  <img src="https://github.com/user-attachments/assets/cc0e2aaf-45d6-411f-9fd3-3fb8d7df3739" width="30%" alt="Example 2." />
-  <img src="https://github.com/user-attachments/assets/bb89027b-223a-4cf1-9b22-8dbe3a369712" width="30%" alt="Example 3." />
+  <img src="https://github.com/user-attachments/assets/5ef6915f-850e-4ee4-add5-44e3b253814a"width="432" alt="Example cover" />
+</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ef8179c9-1c26-4c27-bb0b-6b719a9f5dcb" width="30%" alt="Example 1." />
+  <img src="https://github.com/user-attachments/assets/4ad98238-4f5b-42ab-9c84-bc031c42a64a" width="30%" alt="Example 2." />
+  <img src="https://github.com/user-attachments/assets/14031e18-b563-4c03-83e7-32f9944c0864" width="30%" alt="Example 3." />
 </p>
 
 ## Authoring and Licensing
