@@ -35,17 +35,21 @@
 % ======================
 % SECTIONS
 % ======================
-\AtBeginSection[]
-{
+\AtBeginSection[]{
   \begingroup
   \setbeamercolor{normal text}{fg=polito}
   \setbeamercolor{structure}{fg=polito-orange}
   \setbeamercolor{section in toc}{fg=white}
 
-  % Background personalizzato: blu
   \setbeamertemplate{background}{
     \begin{tikzpicture}[remember picture, overlay]
+      % Sfondo blu
       \fill[polito] (current page.south west) rectangle (current page.north east);
+
+      % Logo watermark semitrasparente e spostato
+      \node[anchor=south east, opacity=0.045, xshift=1cm, yshift=-1cm] 
+        at (current page.south east) 
+        {\includegraphics[height=0.7\paperwidth]{images/polito_logo_secondary_negative.png}};
     \end{tikzpicture}
   }
 
@@ -60,8 +64,8 @@
     \normalsize
     \tableofcontents[currentsection]
   \end{frame}
-  
-  % Ripristina background
+
+  % Ripristina background vuoto dopo questo frame
   \setbeamertemplate{background}{}
   \endgroup
 }

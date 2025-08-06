@@ -32,16 +32,24 @@
 % ======================
 % MISCELLANEA
 % ======================
+% itemize
 \setbeamertemplate{itemize item}{\textemdash}
 \setbeamertemplate{itemize subitem}{\textemdash}
 \setbeamertemplate{itemize subsubitem}{\textemdash}
 
-\setbeamertemplate{section in toc}{$\blacktriangleright$~\inserttocsection}
-\setbeamercolor{section in toc}{fg=black!100!white} 
-\setbeamercolor{section in toc shaded}{fg=black!70!white} 
+% toc
+\setbeamertemplate{section in toc}{%
+  \leavevmode\leftskip=2ex%
+  \llap{\color{polito-orange}\rule{1.5ex}{1.5ex}\hskip1ex}%
+  \inserttocsection\par%
+}
 
-
-\setbeamercolor{section in toc shaded}{fg=black!30!white} 
-
-\setbeamercolor{subsection in toc}{fg=black!100!white}
-\setbeamercolor{subsection in toc shaded}{fg=black!30!white}
+% footnote
+\makeatletter
+\renewcommand\@makefntext[1]{%
+  \noindent
+  \tikz[baseline=(char.base)]{
+    \node[shape=circle, fill=polito-orange, text=white, inner sep=0.5pt] (char) {\@thefnmark};
+  }~#1%
+}
+\makeatother
