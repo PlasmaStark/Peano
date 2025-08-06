@@ -1,20 +1,4 @@
-% ======================
-% TITLE PAGE
-% ======================
-\setbeamertemplate{title page}{%
-  \vskip0pt plus 1filll
-  \hspace*{0.30\paperwidth}
-  \vspace{20mm}
-  \begin{beamercolorbox}[wd=0.65\paperwidth, sep=10pt, rightskip=8mm]{title}%
-    {\usebeamerfont{title}\color{white}\inserttitle\par\vspace{1ex}}
-    {\usebeamerfont{subtitle}\color{white}\insertsubtitle\par\vspace{1ex}}
-    {\usebeamerfont{author}\usebeamercolor[fg]{author}\color{white}\textbf{\insertauthor}\par\vspace{1ex}}
-    {\usebeamerfont{date}\usebeamercolor[fg]{date}\color{white}\insertdate}
-  \end{beamercolorbox}
-  \vskip0pt plus 2fill
-}
-
-\setbeamertemplate{background}{%
+\setbeamertemplate{title page}{
   \begin{tikzpicture}[remember picture, overlay]
     \fill[polito] 
       ([xshift=0.40\paperwidth,yshift=0pt] current page.south west) --
@@ -27,26 +11,23 @@
     \begin{scope}[shift={(current page.north east)}, xshift=-1em, yshift=-1em]
       \node[anchor=north east] (polito) at (-5,0) 
         {\includegraphics[height=1cm]{images/polito_logo_primary_negative.png}};
-        
       \node[anchor=north west] (crypto) at ([xshift=0.5cm]polito.north east) 
         {\includegraphics[height=1cm]{images/crypto_logo_primary_negative.png}};
-        
-      % Barra verticale bianca di separazione
       \draw[white, line width=1pt] 
         ([xshift=0.25cm]polito.north east) -- 
         ([xshift=0.25cm]polito.south east);
     \end{scope}
-  \end{tikzpicture}%
+  \end{tikzpicture}
+  \vskip0pt plus 1filll
+  \hspace*{0.30\paperwidth}
+  \vspace{20mm}
+  \begin{beamercolorbox}[wd=0.65\paperwidth, sep=10pt, rightskip=8mm]{title}%
+    {\usebeamerfont{title}\color{white}\inserttitle\par\vspace{1ex}}{\usebeamerfont{subtitle}\color{white}\insertsubtitle\par\vspace{1ex}}
+    {\usebeamerfont{author}\usebeamercolor[fg]{author}\color{white}\textbf{\insertauthor}\par\vspace{1ex}}
+    {\usebeamerfont{date}\usebeamercolor[fg]{date}\color{white}\insertdate}
+  \end{beamercolorbox}
+  \vskip0pt plus 2fill
 }
-
-
-\makeatletter
-\let\beamer@titlepageactive\relax
-\def\titlepage{%
-  \global\let\beamer@titlepageactive\empty
-  \usebeamertemplate{title page}
-}
-\makeatother
 
 % ======================
 % MISCELLANEA

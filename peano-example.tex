@@ -2,10 +2,11 @@
 
 \usetheme{peano}
 
-\title{Presentation Title}
-\author[N.S.]{N. Surname}
+\title[Modern Cryptography]{Modern Cryptography}
+\subtitle{From One-Time Pad to Post-Quantum}
+\author[N. Surname]{Richard A. Euler}
 \institute{Politecnico di Torino}
-\date[EC26]{Eurocrypt 2026, 32nd International Conference on the Theory and Applications of Cryptographic Techniques}
+\date[EC26]{Eurocrypt 2026}
 
 \begin{document}
 
@@ -13,23 +14,110 @@
   \titlepage
 \end{frame}
 
-\section{Intro to the package}
+% ===== SECTION 1 =====
+\section{Introduction to Cryptography}
 
-\begin{frame}{Introduction}
-  \frametitle{A very very long title for a slide}
-  \framesubtitle{A modest and short subtitle}
-  This is an example of the Peano template for Beamer.
-\end{frame}
-\begin{frame}{Introduction}
-  This is another example of the Peano template for Beamer.
-\end{frame}
-\begin{frame}{Introduction}
-  This is a final example of the Peano template for Beamer.
+\begin{frame}{What is Cryptography?}
+\begin{block}{Definition}
+Cryptography is the study of techniques for securing communication in the presence of adversaries.
+\end{block}
+
+\begin{itemize}
+\item<1-> Confidentiality
+\item<2-> Integrity
+\item<3-> Authenticity
+\item<4-> Non-repudiation
+\end{itemize}
 \end{frame}
 
+\begin{frame}{Types of Cryptography}
+\begin{exampleblock}{Symmetric}
+Same key for encryption and decryption (e.g. AES).
+\end{exampleblock}
+
+\begin{alertblock}{Asymmetric}
+Public and private key pair (e.g. RSA, ECC).
+\end{alertblock}
+\end{frame}
+
+% ===== SECTION 2 =====
+\section{Classical Results}
+
+\begin{frame}
+\frametitle{There Is No Largest Prime Number}
+\framesubtitle{Proved with \textit{reductio ad absurdum}.} 
+
+\begin{theorem}
+There is no largest prime number.
+\end{theorem}
+
+\begin{enumerate}
+  \item<1-| alert@1> Suppose $p$ were the largest prime number.
+  \item<2-> Let $q$ be the product of the first $p$ numbers.
+  \item<3-> Then $q+1$ is not divisible by any of them.
+  \item<4-> But $q + 1$ is greater than $1$, so it must have a prime factor not among the first $p$.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Euler’s Theorem}
+\[
+a^{\phi(n)} \equiv 1 \pmod{n} \quad \text{if } \gcd(a,n)=1
+\]
+
+\pause
+
+Useful in RSA encryption:
+\[
+c = m^e \mod n \quad\text{and}\quad m = c^d \mod n
+\]
+\end{frame}
+
+% ===== SECTION 3 =====
+\section{Modern Schemes}
+
+\begin{frame}{Elliptic Curve Cryptography}
+\begin{itemize}
+\item Based on algebraic structure of elliptic curves over finite fields
+\item Smaller key sizes than RSA for same security level
+\item Standard in many protocols: TLS, Signal, Bitcoin
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Post-Quantum Cryptography}
+\begin{alertblock}{Motivation}
+Quantum computers threaten RSA, ECC, and DH.
+\end{alertblock}
+
+\begin{exampleblock}{Lattice-Based Cryptography}
+Resistant to Shor's algorithm. Used in NIST PQC finalists.
+\end{exampleblock}
+\end{frame}
+
+% ===== SECTION 4 =====
 \section{Conclusion}
-\begin{frame}{It's over}
-  Farewell
+
+\begin{frame}{Summary}
+\begin{itemize}
+\item Cryptography secures digital communication
+\item From classical to quantum-resistant schemes
+\item Future: Hybrid and post-quantum protocols
+\end{itemize}
+\end{frame}
+
+\begin{frame}{References}
+\begin{itemize}
+\item D. Boneh, V. Shoup, A Graduate Course in Applied Cryptography
+\item NIST PQC Project — \url{https://csrc.nist.gov/Projects/post-quantum-cryptography}
+\item Bruce Schneier, Applied Cryptography
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Thank you!}
+\begin{center}
+Questions?
+
+\vspace{2em}
+\end{center}
 \end{frame}
 
 \end{document}
