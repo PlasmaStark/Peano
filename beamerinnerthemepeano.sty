@@ -3,24 +3,42 @@
 % ======================
 \setbeamertemplate{title page}{
   \begin{tikzpicture}[remember picture, overlay]
+    % Image
+    \node[anchor=south west, inner sep=0] 
+      at ([xshift=0pt,yshift=0pt] current page.south west)
+      {\includegraphics[width=0.4\paperwidth]{images/valentino.png}};
+      
+    % Shadow of secondary color
+    \fill[polito-orange] 
+      ([xshift=0.41\paperwidth - 4pt,yshift=-4pt] current page.south west) --
+      ([xshift=\paperwidth - 4pt,yshift=-4pt] current page.south west) --
+      ([xshift=\paperwidth - 4pt,yshift=\paperheight] current page.south west) --
+      ([xshift=0.31\paperwidth - 4pt,yshift=\paperheight] current page.south west) -- 
+      cycle;
+
+    % Shape of primary color
     \fill[polito] 
-      ([xshift=0.40\paperwidth,yshift=0pt] current page.south west) --
+      ([xshift=0.41\paperwidth,yshift=0pt] current page.south west) --
       ([xshift=\paperwidth,yshift=0pt] current page.south west) --
       ([xshift=\paperwidth,yshift=\paperheight] current page.south west) --
-      ([xshift=0.3\paperwidth,yshift=\paperheight] current page.south west) -- 
+      ([xshift=0.31\paperwidth,yshift=\paperheight] current page.south west) -- 
       cycle;
-    \node[anchor=south west, inner sep=0] 
-      at ([xshift=0pt,yshift=0pt] current page.south west){\includegraphics[width=0.4\paperwidth]{images/valentino.png}};
+
+    % Logos
     \begin{scope}[shift={(current page.north east)}, xshift=-1em, yshift=-1em]
       \node[anchor=north east] (polito) at (-5,0) 
         {\includegraphics[height=1cm]{images/polito_logo_primary_negative.png}};
       \node[anchor=north west] (crypto) at ([xshift=0.5cm]polito.north east) 
         {\includegraphics[height=1cm]{images/crypto_logo_primary_negative.png}};
+
+        % Line between logos
       \draw[white, line width=1pt] 
         ([xshift=0.25cm]polito.north east) -- 
         ([xshift=0.25cm]polito.south east);
     \end{scope}
-        \node[anchor=north west, align=left, text width=0.6\paperwidth, inner sep=1em] 
+
+    % Testi (titolo, autore, etc.)
+    \node[anchor=north west, align=left, text width=0.6\paperwidth, inner sep=1em] 
       at ([xshift=0.38\paperwidth, yshift=-4cm] current page.north west)
       {
         {\usebeamerfont{title}\color{white}\inserttitle\par\vspace{1ex}}
