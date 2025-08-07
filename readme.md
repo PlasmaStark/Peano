@@ -6,13 +6,14 @@
 , the new institutional color of *Politecnico di Torino*. Logos and corporate imagery from *Politecnico di Torino* were adopted in accordance with [their most recent legal guidelines](https://www.polito.it/en/polito/about-us/corporate-image). However, the formal request for imagery use is still pending.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/5ef6915f-850e-4ee4-add5-44e3b253814a"width="432" alt="Example cover" />
+  <img src="https://github.com/user-attachments/assets/272a0ecb-16d6-445c-8e9e-e6e32d84a970" width="432" alt="Example cover" />
 </p>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/ef8179c9-1c26-4c27-bb0b-6b719a9f5dcb" width="30%" alt="Example 1." />
-  <img src="https://github.com/user-attachments/assets/4ad98238-4f5b-42ab-9c84-bc031c42a64a" width="30%" alt="Example 2." />
+  <img src="https://github.com/user-attachments/assets/6efb9e95-8823-4062-bb70-024496463dd9" width="30%" alt="Example 1." />
+  <img src="https://github.com/user-attachments/assets/0e1ccc1b-257b-4ae9-b680-981583d88ac7" width="30%" alt="Example 2." />
   <img src="https://github.com/user-attachments/assets/14031e18-b563-4c03-83e7-32f9944c0864" width="30%" alt="Example 3." />
 </p>
+
 <p align="center">
   <img src="https://img.shields.io/badge/LaTeX-Project%20Public%20License-blue.svg" alt="LaTeX Badge" />
   <img src="https://img.shields.io/badge/Beamer-Theme-orange.svg" alt="Beamer Badge" />
