@@ -15,6 +15,15 @@
     \begin{tikzpicture}[remember picture,overlay]
       \useasboundingbox (0,0) rectangle (\the\paperwidth,2);
 
+      % Shadow of color secondary
+      \fill[polito-orange]
+        (0,2.45) --
+        (\the\paperwidth,1.95) --
+        (\the\paperwidth,0.2) --
+        (0, 1) --
+        cycle;
+
+      % Shape of color primary
       \fill[polito] 
         (0,2.5) --             
         (\the\paperwidth,2) -- 
@@ -22,15 +31,27 @@
         (0,0) --                
         cycle;
 
+      % Title & subtitle
       \ifx\insertframesubtitle\@empty%
         \node[anchor=west, white] at (0.4,1.2) {\insertframetitle};
       \else%
         \node[anchor=west, white] at (0.4,1.2) {\insertframetitle};
         \node[anchor=west, white, font=\small] at (0.4,0.7) {\insertframesubtitle};
       \fi
-      \node[anchor=north east, inner sep=0.8em] (polito) at ([yshift=0.15cm]current page.north east) {
-      \includegraphics[height=1cm]{images/polito_logo_secondary_negative.png}
-      };
+      
+      % Logos on the right
+    \begin{scope}[shift={(current page.north east)}, yshift=-0.45cm, xshift=-0.2em]
+      \node[anchor=north east] (crypto) at (0,0)
+        {\includegraphics[height=0.3cm]{images/crypto_logo_secondary_negative.png}};
+    
+      \coordinate (lineX) at ([xshift=-0.05cm]crypto.west);
+      \draw[white, line width=1pt] 
+        (lineX |- crypto.north west) -- 
+        (lineX |- crypto.south west);
+    
+      \node[anchor=east] (polito) at ([xshift=-0.05cm]lineX |- crypto.center)
+        {\includegraphics[height=0.9cm]{images/polito_logo_secondary_negative.png}};
+    \end{scope}
     \end{tikzpicture}
   \end{beamercolorbox}
 }
